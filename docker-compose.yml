@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "80:3000"  # Port 80 di host akan diteruskan ke port 3000 di kontainer
+    volumes:
+      - /etc/ssl/certs:/etc/ssl/certs  # Mount SSL certificates dari host ke kontainer
+      - /etc/ssl/private:/etc/ssl/private
