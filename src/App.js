@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./page/home";
 import Product from "./page/product";
 import TentangKami from "./page/tentangKami";
+import "./index.css";
 
 function App() {
   useEffect(() => {
