@@ -1,9 +1,19 @@
-version: '3'
+version: '3.8'
+
 services:
-  app:
+  web:
     build: .
     ports:
-      - "80:3000"  # Port 80 di host akan diteruskan ke port 3000 di kontainer
+      - "80:80"
+      - "443:443"
     volumes:
-      - /etc/ssl/certs:/etc/ssl/certs  # Mount SSL certificates dari host ke kontainer
-      - /etc/ssl/private:/etc/ssl/private
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
