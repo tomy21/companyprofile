@@ -295,7 +295,7 @@ function Home() {
               <div>
                 <img
                   className="rounded-lg w-[500px] sm:w-[200px] h-[150px]"
-                  src={"/images/bca.jpg"}
+                  src={"/images/BCA_FORESTA.jpg"}
                   alt=""
                   data-aos="fade-left"
                   data-aos-duration="2000"
