@@ -214,7 +214,7 @@ function Home() {
             data-aos-delay="200"
           >
             <div>
-              <img className="" src={"/icons/bca_logo.png"} alt="" />
+              <img className="" src={"/icons/logobca.png"} alt="" />
             </div>
             <div>
               <img className="" src={"/icons/mandiri_logo.png"} alt="" />

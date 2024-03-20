@@ -27,15 +27,15 @@ function Footer() {
             </h1>
           </div>
 
-          <div className="flex flex-col item-end gap-y-5 z-10 w-full sm:w-[50%] w-full mt-10">
+          <div className="flex flex-col item-end gap-y-5 z-10 w-full sm:w-[50%] mt-10">
             <div className="flex flex-row items-end gap-x-5">
               <h1 className="text-white text-3xl">{t("footer.title02")}</h1>
             </div>
-            <div className="flex flex-row text-white gap-4 items-center">
-              <div className="w-full">
+            <div className="flex flex-row text-white gap-8 items-center">
+              <div className="">
                 <MdOutlineMail size={25} className="text-white" />{" "}
               </div>
-              <p className="sm:text-lg text-[14px]">
+              <p className="sm:text-lg text-[14px] sm:w-auto w-full">
                 business.development@skyparking.co.id
               </p>
             </div>
