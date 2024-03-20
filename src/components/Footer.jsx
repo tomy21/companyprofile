@@ -1,10 +1,13 @@
 import React from "react";
 import { MdOutlineMail, MdOutlineMapsHomeWork } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
-    <footer className="h-auto relative">
+    <footer className="h-auto relative -z-10">
       <div
         className="absolute inset-0 bg-cover bg-center filter brightness-50"
         style={{ backgroundImage: `url(${"/images/footer.jpg"})` }}
@@ -19,18 +22,16 @@ function Footer() {
               </h1>
             </div>
             <h1 className="text-white text-sm sm:text-base sm:text-justify">
-              Sky Parking adalah salah satu operator tempat parkir terbaik di
-              Indonesia. Perusahaan ini telah berkembang dari awal yang
-              sederhana menjadi salah satu perusahaan terkemuka di bidangnya.
-              Perusahaan ini didirikan berdasarkan semangat profesionalisme dan
-              keunggulan produk, menciptakan kualitas yang tak tertandingi dalam
-              berbagai aspek bisnisnya.
+              {t("footer.title01")}
             </h1>
           </div>
 
-          <div className="flex flex-col item-end gap-y-5 z-10 w-full sm:w-[40%]">
+          <div
+            className="flex flex-col item-end gap-y-5 z-10 w-full sm:w-[40%]"
+            id="#contact"
+          >
             <div className="flex flex-row items-end gap-x-5">
-              <h1 className="text-white text-3xl">Hubungi Kami</h1>
+              <h1 className="text-white text-3xl">{t("footer.title02")}</h1>
             </div>
             <div className="flex flex-row text-white gap-5 items-center">
               <MdOutlineMail size={30} />

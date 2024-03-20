@@ -1,0 +1,121 @@
+{
+    "about":{
+        "header": {
+            "subtitle": "Sky Parking is one of the best parking place operators in Indonesia. The company has grown from humble beginnings to become a leading company in its field. Founded on the spirit of professionalism and product excellence, this company creates unparalleled quality in various aspects of its business."
+        },
+        "content":{
+            "content01":{
+                "title": "Vision",
+                "content": "To become the preferred parking solution provider in Indonesia."
+            },
+            "content02":{
+                "title": "Mission",
+                "content": "Operational Excellence through Technology"
+            },
+            "content03":{
+                "title": "Awards"
+            }
+        }
+    },
+    "product":{
+        "header": {
+            "title": "Future Parking Solutions",
+            "subtitle": "Make every journey more comfortable with SKY Parking, the choice parking place for a better future."
+        },
+        "content":{
+            "content01":{
+                "title": "SKY Parking Technology"
+            },
+            "content02":{
+                "title": "Tap In Tap Out (TITO)",
+                "content": "Non-Cash Payment will reduce leaks and make monitoring, etc., easier, as well as facilitate and speed up transactions at the exit gate."
+            },
+            "content03":{
+                "title": "QRIS Payment",
+                "content": "Parking payment at SKY Parking is easier with QRIS payment method. Simply scan the QR code and enjoy the convenience without having to carry cash and with guaranteed security."
+            },
+            "content04":{
+                "title": "Membership",
+                "content": "Non-Cash Payment will reduce leaks and make monitoring, etc., easier, as well as facilitate and speed up transactions at the exit gate."
+            },
+            "content05":{
+                "title": "E-wallet Payment",
+                "content": "To facilitate our customers' transactions, we have collaborated with several payment channels in Indonesia such as OVO, Go-Pay, LinkAja, and others."
+            },
+            "content06":{
+                "title": "Realtime Monitoring Dashboard"
+            },
+            "content07":{
+                "title": "User-friendly and Realtime Dashboard",
+                "content": "Witness the parking world in the palm of your hand with real-time data presented directly from the field. Our customers can easily view real-time information, make smart decisions, and optimize their parking experience. SKY Parking, where every detail is perfectly arranged to ensure an unforgettable parking experience!"
+            },
+            "content08":{
+                "title": "Various Forms of Collaboration",
+                "content": {
+                    "0": "Management Fee",
+                    "1": "Profit Sharing",
+                    "2": "Revenue Sharing",
+                    "3": "Cost and Fee",
+                    "4": "Equipment Rent",
+                    "5": "System Rent"
+                },
+                "subtitle": "For inquiries regarding collaboration forms, please contact:"
+            }
+        }
+    },
+    "home":{
+        "header": {
+            "title": "Parking Solutions",
+            "subtitle": "Modern For Your Lifestyle",
+            "buttonText": "Contact us"
+        },
+        "card":{
+            "card1":"Location",
+            "card2":"Employees",
+            "card3":"Parking Area"
+        },
+        "content":{
+            "content01":{
+                "title": "Smart Parking Services Solution for the Future",
+                "subtitle": "Cloud-based parking management system innovation, focusing on providing the best experience for users."
+            },
+            "content02":{
+                "title": "Fast Process",
+                "content": "The payment system reading process is faster, 2-3 seconds"
+            },
+            "content03":{
+                "title": "Realtime Dashboard",
+                "content": "Transaction data can be monitored in real-time. Monitor the number of transactions and transaction values"
+            },
+            "content04":{
+                "title": "VIP Parking",
+                "content": "Parking areas specifically provided for guests or customers with VIP (Very Important Person) status."
+            },
+            "content05":{
+                "title": "Without Attendants",
+                "content": "Security surveillance can be done entirely with technology."
+            },
+            "content06":{
+                "title": "Varied Payment Systems",
+                "content": "Variety of non-cash payment options, non-cash cards, and payment through digital wallets"
+            },
+            "content07":{
+                "title": "Valet",
+                "content": "Drivers don't need to worry about finding parking spaces, as valet attendants will handle all of that."
+            },
+            "content08":{
+                "title1": "Sky Parking Partners",
+                "title2": "Our Clients"
+            }
+        }
+    },
+    "footer":{
+        "title01": "Sky Parking is one of the best parking place operators in Indonesia. The company has grown from humble beginnings to become a leading company in its field. Founded on the spirit of professionalism and product excellence, this company creates unparalleled quality in various aspects of its business.",
+        "title02": "Contact Us"
+    },
+    "navbar":{
+        "1":"Product",
+        "2":"About Us"
+    }
+
+}

@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
-import Header from "../components/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { MdLocationPin, MdGroups, MdEmojiFlags } from "react-icons/md";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Home() {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -15,7 +18,34 @@ function Home() {
   }, []);
   return (
     <>
-      <Header />
+      <div className={`relative h-[50vh] sm:h-[80vh] p-2 `}>
+        <div
+          className="absolute inset-0 bg-cover bg-center filter brightness-50 -z-10"
+          style={{ backgroundImage: 'url("/images/hero.jpg")' }}
+        ></div>
+        <nav className="absolute inset-x-0 top-0 p-4 z-10">
+          <Navbar />
+        </nav>
+        <div
+          className="flex flex-col cursor-pointer mt-20 px-10 w-full sm:w-1/2 sm:mt-32"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-duration="2000"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-sine"
+        >
+          <h1 className="text-white text-start font-base text-xl sm:text-4xl w-full">
+            <span className="font-semibold text-yellow-400">SKY PARKING</span>{" "}
+            {t("home.header.title")}
+          </h1>
+          <h1 className="text-white text-start text-lg sm:text-4xl mt-3 w-[80%] sm:w-[90%]">
+            {t("home.header.subtitle")}
+          </h1>
+          <button className="mt-10 border-2 py-3 px-5 rounded-md border-yellow-400 text-white hover:bg-yellow-400 duration-200 w-52">
+            <Link to={"#contact"}>{t("home.header.buttonText")}</Link>
+          </button>
+        </div>
+      </div>
       <div className="">
         <div className="flex flex-col items-center justify-evenly gap-x-10 gap-y-10 px-10 m-auto sm:flex-row mt-28 mb-20">
           <div
@@ -25,7 +55,7 @@ function Home() {
           >
             <MdLocationPin size={50} />
             <h2 className="font-medium text-2xl">112 +</h2>
-            <p className="text-xl">Lokasi</p>
+            <p className="text-xl">{t("home.card.card1")}</p>
           </div>
           <div
             className="w-44 h-36 justify-center border-[1px] shadow-slate-300 border-slate-100 shadow-inner rounded-md flex flex-col gap-y-2 items-center py-3 hover:bg-yellow-400"
@@ -34,7 +64,7 @@ function Home() {
           >
             <MdGroups size={50} />
             <h2 className="font-medium text-2xl">376 +</h2>
-            <p className="text-xl">Karyawan</p>
+            <p className="text-xl">{t("home.card.card2")}</p>
           </div>
           <div
             className="w-44 h-36 justify-center border-[1px] shadow-slate-300 border-slate-100 shadow-inner rounded-md flex flex-col gap-y-2 items-center py-3 hover:bg-yellow-400"
@@ -43,7 +73,7 @@ function Home() {
           >
             <MdEmojiFlags size={50} />
             <h2 className="font-medium text-2xl">84.396 +</h2>
-            <p className="text-xl">Area Parkir</p>
+            <p className="text-xl">{t("home.card.card3")}</p>
           </div>
         </div>
         <div className="mt-40 flex flex-col justify-center items-center">
@@ -54,11 +84,10 @@ function Home() {
             data-aos-easing="ease-in-sine"
           >
             <h1 className="w-[80%] sm:w-full mb-3 text-2xl sm:text-[32px] text-center font-semibold">
-              Solusi Layanan Parkir Cerdas untuk Masa Depan
+              {t("home.content.content01.title")}
             </h1>
             <h1 className="w-[80%] sm:w-full text-base sm:text-[20px] text-center">
-              Inovasi sistem pengelolaan parkir berbasis cloud, dengan fokus
-              memberikan pengalaman terbaik bagi pengguna.
+              {t("home.content.content01.subtitle")}
             </h1>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center mt-20 gap-32">
@@ -74,9 +103,11 @@ function Home() {
                   alt="proses cepat"
                 />
                 <div className="flex flex-col gap-y-3">
-                  <p className="text-[20px] font-semibold">Proses Cepat</p>
+                  <p className="text-[20px] font-semibold">
+                    {t("home.content.content02.title")}
+                  </p>
                   <p className="text-[20px]">
-                    Proses pembacaan system pembayaran lebih cepat , 2-3 detik
+                    {t("home.content.content02.content")}
                   </p>
                 </div>
               </div>
@@ -88,11 +119,10 @@ function Home() {
                 />
                 <div className="flex flex-col gap-y-3">
                   <p className="text-[20px] font-semibold">
-                    Dashboard Realtime
+                    {t("home.content.content03.title")}
                   </p>
                   <p className="text-[20px]">
-                    Data transaksi dapat di monitor secara realtime. dengan
-                    monitore jumlah transaksi dan nilai transaksi
+                    {t("home.content.content03.content")}
                   </p>
                 </div>
               </div>
@@ -103,10 +133,11 @@ function Home() {
                   alt="parkingva"
                 />
                 <div className="flex flex-col gap-y-3">
-                  <p className="text-[20px] font-semibold">Parking VIP</p>
+                  <p className="text-[20px] font-semibold">
+                    {t("home.content.content04.title")}
+                  </p>
                   <p className="text-[20px]">
-                    Area parkir yang disediakan khusus untuk tamu atau pelanggan
-                    dengan status VIP (Very Important Person).
+                    {t("home.content.content04.content")}
                   </p>
                 </div>
               </div>
@@ -124,10 +155,11 @@ function Home() {
                   alt=""
                 />
                 <div className="flex flex-col gap-y-3">
-                  <p className="text-[20px] font-semibold">Tanpa Petugas</p>
+                  <p className="text-[20px] font-semibold">
+                    {t("home.content.content05.title")}
+                  </p>
                   <p className="text-[20px]">
-                    Pengawasan pengamanan dapat dilakukan semua dengan
-                    teknologi.
+                    {t("home.content.content05.content")}
                   </p>
                 </div>
               </div>
@@ -139,11 +171,10 @@ function Home() {
                 />
                 <div className="flex flex-col gap-y-3">
                   <p className="text-[20px] font-semibold">
-                    Sistem Pembayaran Variatif
+                    {t("home.content.content06.title")}
                   </p>
                   <p className="text-[20px]">
-                    Pilihan pembayaran non-tunai yang variatif, kartu non-tunai,
-                    dan pembayaran melalui dompet digital
+                    {t("home.content.content06.content")}
                   </p>
                 </div>
               </div>
@@ -154,10 +185,11 @@ function Home() {
                   alt=""
                 />
                 <div className="flex flex-col gap-y-3">
-                  <p className="text-[20px] font-semibold">Valet</p>
+                  <p className="text-[20px] font-semibold">
+                    {t("home.content.content07.title")}
+                  </p>
                   <p className="text-[20px]">
-                    Pengemudi tidak perlu khawatir mencari tempat parkir, karena
-                    petugas valet akan menangani semua itu.
+                    {t("home.content.content07.content")}
                   </p>
                 </div>
               </div>
@@ -173,7 +205,7 @@ function Home() {
             data-aos-easing="ease-in-sine"
             data-aos-duration="2000"
           >
-            Mitra Sky Parking
+            {t("home.content.content08.title1")}
           </h1>
           <div
             className="flex flex-wrap sm:flex-row gap-x-20 justify-center items-center w-full mb-5"
@@ -217,7 +249,9 @@ function Home() {
 
         {/* Klien Kami Section */}
         <div className="flex flex-col justify-center items-center mt-32 py-10">
-          <h1 className="text-[32px] font-semibold mb-10">Klien Kami</h1>
+          <h1 className="text-[32px] font-semibold mb-10">
+            {t("home.content.content08.title2")}
+          </h1>
           <div className="flex flex-col gap-4 w-[80%]">
             <div className="flex flex-col sm:flex-row gap-1">
               <img
