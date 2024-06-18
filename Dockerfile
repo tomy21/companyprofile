@@ -36,6 +36,7 @@ COPY server.js /app/server.js
 RUN npm install express
 
 # Expose port 443 untuk HTTPS
+EXPOSE 80
 EXPOSE 443
 
 # Perintah untuk menjalankan server Express dengan HTTPS
