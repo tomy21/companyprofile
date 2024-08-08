@@ -143,13 +143,13 @@ function Product() {
       </div>
 
       <div
-        className="flex flex-row items-center gap-24 w-full mb-28 m-auto sm:px-32"
+        className="flex flex-row items-center gap-24 w-full mb-28 m-auto sm:px-32 bg-gray-200 py-7"
         data-aos="zoom-in-right"
         data-aos-delay="200"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
       >
-        <div className="px-10">
+        <div className="px-10 ">
           <h1 className="text-2xl font-semibold mb-5">
             {t("product.content.content06.title")}
           </h1>
@@ -175,17 +175,17 @@ function Product() {
         <div className="w-96 h-96 rounded-full bg-yellow-400 opacity-50 absolute top-[60%] left-16 -z-10 transform -translate-y-1/2"></div>
       </div>
 
-      <div className="h-auto bg-gray-200 flex flex-col sm:flex-col justify-between items-start px-20 py-20 gap-3">
+      <div className="h-auto  flex flex-col sm:flex-col justify-between items-start px-20 py-20 gap-3">
         <h1 className="text-xl font-semibold mb-1">
           {t("product.content.content08.title")}
         </h1>
         <ul className="list-disc pl-5">
+          <li className="mb-2">{t("product.content.content08.content.0")}</li>
           <li className="mb-2">{t("product.content.content08.content.1")}</li>
           <li className="mb-2">{t("product.content.content08.content.2")}</li>
           <li className="mb-2">{t("product.content.content08.content.3")}</li>
           <li className="mb-2">{t("product.content.content08.content.4")}</li>
           <li className="mb-2">{t("product.content.content08.content.5")}</li>
-          <li className="mb-2">{t("product.content.content08.content.6")}</li>
         </ul>
         <p className="text-base">
           {t("product.content.content08.subtitle")}
