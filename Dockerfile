@@ -1,43 +1,24 @@
-# Gunakan node sebagai base image
-FROM node:18 as build
+FROM node:20-alpine
 
-# Set working directory
+# Menetapkan direktori kerja di dalam container
 WORKDIR /app
 
-# Salin package.json dan package-lock.json untuk instalasi dependensi
+# Menyalin file package.json dan package-lock.json (atau yarn.lock) ke dalam direktori kerja
 COPY package*.json ./
 
-# Install dependensi
+# Menginstall dependencies aplikasi
 RUN npm install
 
-# Salin semua file proyek ke dalam container
+# Menyalin sisa file aplikasi ke dalam direktori kerja
 COPY . .
 
-# Build proyek React
+# Membangun aplikasi React untuk produksi
 RUN npm run build
 
-# Production stage
-FROM node:18
+RUN npm i -g serve
 
-# Set working directory
-WORKDIR /app
+# Mengekspos port yang akan digunakan
+EXPOSE 4002
 
-# Salin hasil build proyek React ke dalam direktori server Express
-COPY --from=build /app/build /app/public
-
-# Salin file sertifikat SSL ke dalam container
-COPY certificate.crt /app/certificate.crt
-COPY private.key /app/private.key
-
-# Salin file server.js ke dalam container
-COPY server.js /app/server.js
-
-# Install Express
-RUN npm install express
-
-# Expose port 443 untuk HTTPS
-EXPOSE 80
-EXPOSE 443
-
-# Perintah untuk menjalankan server Express dengan HTTPS
-CMD ["node", "server.js"]
+# Menetapkan perintah untuk menjalankan aplikasi di dalam container
+CMD ["serve", '-s', "build"]
