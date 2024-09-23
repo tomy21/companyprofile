@@ -18,10 +18,10 @@ services:
     #   - REACT_APP_URL_APIPAYMENT=https://dev-paymentapi.skyparking.online
     #   - REACT_APP_URL_PLATERECOGNICE=https://api.platerecognizer.com/v1/plate-reader/
     networks:
-      - company_network
+      - membership_network
       
     command: ["serve", '-s', "build"]
 
 networks:
-  company_network:
+  membership_network:
     driver: bridge
